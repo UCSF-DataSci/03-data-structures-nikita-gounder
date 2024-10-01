@@ -16,17 +16,18 @@ from datetime import date
 
 # Create a list of quotes here
 quotes = [
-    "The greatest glory in living lies not in never falling, but in rising every time we fall. -Nelson Mandela",
+"The greatest glory in living lies not in never falling, but in rising every time we fall. -Nelson Mandela",
 "The way to get started is to quit talking and begin doing. -Walt Disney",
 "Your time is limited, so don't waste it living someone else's life. Don't be trapped by dogma – which is living with the results of other people's thinking. -Steve Jobs",
 "The future belongs to those who believe in the beauty of their dreams. -Eleanor Roosevelt",
 "If you look at what you have in life, you'll always have more. If you look at what you don't have in life, you'll never have enough. -Oprah Winfrey"
 ]
 
+# Your code here
 def get_quote_of_the_day(quotes):
     todays_quote = None
 
-    # Your code here
+    todays_quote = random.choice(quotes)
     
     return todays_quote
 

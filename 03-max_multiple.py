@@ -15,6 +15,7 @@ Hints:
 """
 
 
+
 THOUSAND_DIGIT_NUMBER = """
 73167176531330624919225119674426574742355349194934
 96983520312774506326239578318016984801869478851843
@@ -38,10 +39,18 @@ THOUSAND_DIGIT_NUMBER = """
 71636269561882670428252483600823257530420752963450
 """.replace("\n", "")
 
+
 def find_greatest_product(number_string, adjacent_digits=13):
     max_product = 0
-    
-    # Your code here
+
+    for i in range(len(number_string)):
+        slice = number_string[i:i+adjacent_digits]
+
+        product = 1
+        for j in slice:
+            product *= int(j) 
+
+        max_product = max(max_product, product)
 
     return max_product
 
